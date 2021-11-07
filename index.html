@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeWork</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div data-cancel id="js-store-popup" class="popup js-store-popup hide">
+            <form data-form="store"сlass="js-form-for-valid js-store-form">
+                <div class="popup-header">
+                    <h3>Create new store</h3>
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Name:</label>
+                    <input placeholder="Name" class="js-for-valid" data-form="store" data-valid="Name" type="text" name="Name">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Email:</label>
+                    <input placeholder="Email" class="js-for-valid" data-form="store" data-valid="Email" type="text" name="Email">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Phone number:</label>
+                    <input placeholder="Phone" class="js-for-valid" data-form="store" data-valid="PhoneNumber" type="text" name="PhoneNumber" >
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Address:</label>
+                    <input placeholder="Address" class="js-for-valid" data-form="store" data-valid="Address" type="text" name="Address">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Established date:</label>
+                    <input placeholder="Date" class="js-for-valid" data-form="store" data-valid="Established" type="date" name="Established"/>
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Floor Area:</label>
+                    <input placeholder="Floor Area" class="js-for-valid" data-form="store" data-valid="FloorArea" type="text" name="FloorArea">
+                </div>
+                <div class="submit-wrapper">
+                    <button data-cancel class="pupup_btn js-cancel-btn">Cancel</button>
+                    <button class="pupup_btn js-submit-btn">Create</button>
+                </div>
+            </form>
+        </div>
+        
+        <div data-cancel id="js-tabel-popup" class="popup js-tabel-popup hide">
+            <form data-form="table" class="js-form-for-valid" action="#">
+                <div class="popup-header">
+                    <h3>Create new product</h3>
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Name:</label>
+                    <input data-form="table" placeholder="Name" class="js-for-valid" data-valid="Name" type="text" name="Name">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Price:</label>
+                    <input data-form="table"  min="1" name='Price' data-valid="Price" class="js-for-valid" placeholder="Price" type="number">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Specs:</label>
+                    <input data-form="table" placeholder="Specs" class="js-for-valid" name='Specs' data-valid="Specs" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Rating:</label>
+                    <input data-form="table"  min="1" max="5" name="Rating" data-valid="Rating" class="js-for-valid" placeholder="Rating from 1 to 5" type="number">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Supplier info:</label>
+                    <input data-form="table" placeholder="Supplier info" class="js-for-valid" name="SupplierInfo" data-valid="SupplierInfo" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Made in:</label>
+                    <input data-form="table" placeholder="Country" class="js-for-valid" name="MadeIn" data-valid="MadeIn" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Production company name:</label>
+                    <input data-form="table" placeholder="Company" class="js-for-valid" name="ProductionCompanyName" data-valid="ProductionCompanyName" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Status:</label>
+                    <select data-form="table" placeholder="Status" class="js-for-valid" name="Status" data-valid="Status" type="text">
+                        <option value="OK">Ok</option>
+                        <option value="STORAGE">Storage</option>
+                        <option value="OUT_OF_STOCK">Out of stock</option>
+                    </select>
+                </div>
+                <div class="submit-wrapper">
+                     <button data-cancel class="pupup_btn js-cancel-btn">Cancel</button>
+                    <button  class="pupup_btn js-submit-btn ">Create</button>
+                </div>
+            </form>
+        </div>
+
+        <div data-cancel id="js-edit-popup" class="popup js-tabel-popup hide">
+            <form  data-form="edit" class="js-form-for-valid" action="#">
+                <div class="popup-header">
+                    <h3>Edit product</h3>
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Name:</label>    
+                    <input data-form="edit" class="js-for-valid"  id="name" placeholder="Name" data-valid="Name" name="Name"type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Price:</label>
+                    <input data-form="edit" class="js-for-valid"  id="price" min="1" name='Price' placeholder="Price" data-valid="Price" type="number">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Specs:</label>
+                    <input data-form="edit" class="js-for-valid" id="specs" placeholder="Specs" data-valid="Specs" name='Specs' type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Rating:</label>
+                    <input data-form="edit" class="js-for-valid"  id="rating" min="1" max="5" name="Rating" data-valid="Rating" placeholder="Rating from 1 to 5" type="number">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Supplier info:</label>
+                    <input data-form="edit" class="js-for-valid"  id="supplierInfo" placeholder="Supplier info" data-valid="SupplierInfo" name="SupplierInfo" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Made in:</label>
+                    <input data-form="edit" class="js-for-valid"  id="madeIn" placeholder="Country" name="MadeIn" data-valid="MadeIn" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Production company name:</label>
+                    <input data-form="edit" class="js-for-valid" id="productionCompanyName" placeholder="Company" name="ProductionCompanyName" data-valid="ProductionCompanyName" type="text">
+                </div>
+                <div class="popup-item-wrapper">
+                    <label>Status:</label>
+                    <select data-form="edit" class="js-for-valid" placeholder="Status" name="Status" data-valid="Status" type="text">
+                        <option value="OK">Ok</option>
+                        <option value="STORAGE">Storage</option>
+                        <option value="OUT_OF_STOCK">Out of stock</option>
+                    </select>
+                </div>
+                <div class="submit-wrapper">
+                    <button data-cancel class="pupup_btn js-cancel-btn">Cancel</button>
+                    <button id="js-edit-submit"  class="pupup_btn js-submit-btn">Save</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="master ">
+            <header class="master__header header">
+               <h3 class="master__title title">Stores list </h3>
+           </header>
+            <section class="master__view-box view-box">
+                <div  id="master__searchField" class="master__searchField">
+                    <div id = 'master__searchField-inner' class="master__searchField-inner searchField-inner">
+                        <input placeholder="Search" type="text">
+                        <i id="js-master-search" class="fas fa-search js-master-search"></i>
+                        <i id="fa-sync" class="fas fa-sync"></i>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="line__item line__item--first">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="line__item line__item--second">
+                        <i class="fas fa-thumbtack"></i>
+                    </div>
+                </div>
+                <ul id = "box-list" class="view-box__list box-list">
+                </ul>
+            </section>
+            <footer class="footer master__footer">
+                <button id="js-master-createBtn" class="footer__createBtn js-master-createBtn">
+                    <i class="fas fa-plus"></i>Create
+                </button>
+            </footer>
+        </div>
+
+        <div class="detail ">
+            <div class="detail__empty-wrapper">
+                <i class="fas fa-store"></i>
+                <h3>The store is not selected</h3>
+                <span>Please select the store to proceed</span>
+            </div>
+            <div class="detail__header-wrapper hide"> 
+                <header class="detail__header header ">
+                    <h3 class="detail-title title text-hide">Store Details</h3>
+                </header>
+                <div class="detail__contacts">
+                    <div class="detail__contacts-item contacts-item">
+                        <span class="contacts-item__label">Email:</span>
+                        <span class="contacts-item__text js-email"></span>
+                    </div>
+                    <div class="detail__contacts-item contacts-item">
+                        <span class="contacts-item__label">Phone Number:</span>
+                        <span class="contacts-item__text js-phone"></span>
+                    </div>
+                    <div class="detail__contacts-item contacts-item">
+                        <span class="contacts-item__label">Address:</span>
+                        <span class="contacts-item__text js-address"></span>
+                    </div>
+                    <div class="detail__contacts-item contacts-item">
+                        <span class="contacts-item__label">Established Date:</span>
+                        <span class="contacts-item__text js-date"></span>
+                    </div>
+                    <div class="detail__contacts-item contacts-item">
+                        <span class="contacts-item__label">Flooer Area:</span>
+                        <span class="contacts-item__text js-area"></span>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="line__item line__item--first">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="line__item line__item--second">
+                        <i class="fas fa-thumbtack"></i>
+                    </div>
+                </div>
+                <div class="detail__filter filter">
+                    <div id="filter__item--all" class="filter__item filter__item--all active">
+                        <span><span class="filter__item--number"></span>All</span>
+                    </div>
+                    <div id="filter__item--ok"  class="filter__item filter__item--ok ">
+                        <i class="far fa-check-circle"></i>
+                        <span class="filter__lable ">Ok</span>
+                        <div class="filter__item--counter js-filter-ok"></div>
+                    </div>
+                    <div id="filter__item--storage"  class="filter__item filter__item--storage ">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span class="filter__lable">Storage</span>
+                        <div class="filter__item--counter js-filter-storage"></div>
+                    </div>
+                    <div id="filter__item--outOfStock"  class="filter__item filter__item--outOfStock ">
+                        <i class="fas fa-exclamation"></i>  
+                        <span class="filter__lable ">Out of stock</span>
+                        <div class="filter__item--counter js-filter-outOfStock"></div>
+                    </div>
+                </div>
+                <div class="detail__searhField">
+                    <h3 class="detail__table-title">Products</h3>
+                    <div id="detail__searchField-inner" class="detail__searchField-inner searchField-inner">
+                        <input placeholder="Search" type="text">
+                        <i id="js-detail-search" class="fas fa-search js-detail-search"></i>
+                    </div>
+                </div>
+                <div class="detail__content">
+                    
+                    <table id="js-table" class="detail__table js-table">
+                        <colgroup>
+                            <col style="width:14%">
+                            <col style="width:13%">
+                            <col style="width:12%">
+                            <col style="width:13%">
+                            <col style="width:13%">
+                            <col style="width:12%">
+                            <col style="width:14%">
+                            <col style="width:10%">
+                        </colgroup>
+                            
+                        <thead class="thead">
+                            <tr class='thead__row'>
+                                <th class="table__name"><i id="js-name-sorting" class="fas fa-align-justify js-name-sorting "></i>Name</th>
+                                <th class="table__price">Price</th>
+                                <th class="table__specs">Specs</th>
+                                <th class="table__supplierInfo text-hide" title="Supplier Info">Supplier Info</th>
+                                <th class="table__country text-hide" ><div><i  id="js-country-sorting"class="fas fa-align-justify js-country-sorting"></i>Country of origin</div> </th>
+                                <th class="table__company text-hide" title="Prod.company"><i id="js-prod-sorting" class="fas fa-align-justify js-prod-sorting"></i>Prod.company</th>
+                                <th class="table__rating">Ratings</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id='js-tbody' class="js-tbody"></tbody>
+                    </table>    
+                </div> 
+            </div>
+            <footer class="footer detail__footer hide">
+                <button id = "js-delete-btn" class="footer__deleteBtn js-delete-btn"> <i class="fas fa-trash-alt"></i>Delete</button>
+                <button id = "js-detail-create" class="footer__createBtn js-detail-create"><i class="fas fa-plus"></i>Create</button>
+            </footer>
+        </div>
+
+    </div>
+    <script src="./js-mvc.js"></script>
+</body>
+</html>
